@@ -37,4 +37,3 @@ Pearl provides a core SDK that enables developers to create, deploy, and manage 
 ## License
 
 (License information to be added)
-

@@ -25,7 +25,7 @@ export class EventHandler {
   public emit(eventName: string, ...args: any[]): void {
     const listeners = this.events.get(eventName);
     if (listeners) {
-      listeners.forEach(listener => listener(...args));
+      listeners.forEach((listener) => listener(...args));
     }
   }
 
