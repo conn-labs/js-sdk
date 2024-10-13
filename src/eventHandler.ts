@@ -54,4 +54,8 @@ export class EventHandler {
     const listeners = this.events.get(eventName);
     return listeners ? Array.from(listeners) : [];
   }
+
+  public async execute() {
+    
+  }
 }

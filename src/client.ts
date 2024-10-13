@@ -19,34 +19,40 @@ export class Pearl extends EventHandler {
        proMode: true,  
        openaiKey: process.env.OPENAI_API_KEY || openaiKey
      };
-   }
+   }     
 
 
-   public async defineWorkflow(input: string) {
+   public defineWorkflow(input: string): Pearl {
      this.workFlow.input = input;
-   }
+     return this
+   }     
 
-   public async context(ctx: Context[]) {
+   public context(ctx: Context[]): Pearl {
      this.workFlow.context = ctx
-   }
+     return this
+   }    
 
-   public async once() {
+   public once(): Pearl {
     this.workFlow.instances = 1;
-   }
+    return this
+   }   
 
-   public async instances(instances: number) {
+   public instances(instances: number): Pearl {
     this.workFlow.instances = instances
+    return this
    }
 
-   public async cron(cron: string) {
+   public cron(cron: string): Pearl {
     console.warn("Cron functionality has not been implemented yet. Follow @PearlAI_ on Twitter for updates.");
     throw new Error("Cron functionality is not yet available.");
    }
 
-   public async onEvent(event: JobEvents) {
+   public onEvent(event: JobEvents): Pearl {
     console.warn("Event functionality has not been implemented yet. Follow @PearlAI_ on Twitter for updates.");
     throw new Error("Event functionality is not yet available.");
    }
+
+
 
 
 }
