@@ -1,6 +1,7 @@
 import { error } from "console";
 import { EventHandler } from "./eventHandler";
 import { AgentWorkflow, Context, JobEvents } from "./types";
+import { handleWebSocket } from "./ws";
 
 export class Pearl extends EventHandler {
    private workFlow: AgentWorkflow;
@@ -53,6 +54,8 @@ export class Pearl extends EventHandler {
    }
 
 
-
+   public async execute() {
+    await handleWebSocket(this, this.workFlow)
+  }
 
 }

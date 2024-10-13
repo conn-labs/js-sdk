@@ -1,3 +1,5 @@
+import { handleWebSocket } from "./ws";
+
 export class EventHandler {
   private events: Map<string, Set<Function>>;
 
@@ -55,7 +57,5 @@ export class EventHandler {
     return listeners ? Array.from(listeners) : [];
   }
 
-  public async execute() {
-    
-  }
+
 }
