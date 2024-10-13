@@ -3,6 +3,9 @@
   "version": "0.0.2",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "test": "ts-node example/index.ts"
+  },
   "dependencies": {
     "@types/node": "^22.7.5",
     "@types/ws": "^8.5.12",

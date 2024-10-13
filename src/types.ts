@@ -42,7 +42,7 @@ export interface AgentWorkflow {
   memory: boolean;
   proMode: boolean;
   apiKey: string;
-  openaiKey?: string;
+  openaiKey?: string | null;
 }
 
 export interface workflowContext {

@@ -5,7 +5,7 @@ import { handleWebSocket } from "./ws";
 
 export class Pearl extends EventHandler {
    private workFlow: AgentWorkflow;
-   private route: string = "/agent"; 
+   private route: string = "/workflow"; 
      
   constructor({ apiKey, openaiKey }: { apiKey?: string; openaiKey?: string }) {
      super();
@@ -18,7 +18,7 @@ export class Pearl extends EventHandler {
        context: [],
        memory: true,
        proMode: true,  
-       openaiKey: process.env.OPENAI_API_KEY || openaiKey
+       openaiKey: process.env.OPENAI_API_KEY || openaiKey || null
      };
    }     
 
