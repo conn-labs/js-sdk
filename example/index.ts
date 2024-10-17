@@ -1,21 +1,19 @@
-import {Pearl} from "../src"
-
-import { Fields, Provider } from "../src/types";
-
+import { Pearl } from "../src"
 
 
 const client = new Pearl({ apiKey: "quark_ls_KUXR4U$$2$R3LgF^OkXx9k+" })
 .context([])
-.defineWorkflow("Go to google.com, search google finance find me stocks of 10 different companies and you can use url hopping, all 10 companies have to be different, memorize their stock prices and charts on the page and give me a detailed comparision of their prices as successmessage")
+.defineWorkflow(`
+  go to flipkart.com and search 10 laptops of 10 different 
+  brands by url jumping instead of manual search
+  and compare their prices in the success message at end
+`)
 .instances(10);
 
 
-
-
 client.on("update", (msg: any) => {
-    console.log(msg)
+    console.log("thoughts on action: ", msg)
 })
-
 
 client.execute();
 
